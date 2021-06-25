@@ -1,0 +1,35 @@
+1624567241861	geckodriver	INFO	Listening on 127.0.0.1:51935
+1624567242805	mozrunner::runner	INFO	Running command: "/usr/bin/firefox" "--marionette" "-foreground" "-no-remote" "-profile" "/tmp/rust_mozprofileVhDW9Y"
+1624567244239	addons.webextension.doh-rollout@mozilla.org	WARN	Loading extension 'doh-rollout@mozilla.org': Reading manifest: Invalid extension permission: networkStatus
+1624567247421	addons.webextension.screenshots@mozilla.org	WARN	Loading extension 'screenshots@mozilla.org': Reading manifest: Invalid extension permission: mozillaAddons
+1624567247421	addons.webextension.screenshots@mozilla.org	WARN	Loading extension 'screenshots@mozilla.org': Reading manifest: Invalid extension permission: telemetry
+1624567247421	addons.webextension.screenshots@mozilla.org	WARN	Loading extension 'screenshots@mozilla.org': Reading manifest: Invalid extension permission: resource://pdf.js/
+1624567247421	addons.webextension.screenshots@mozilla.org	WARN	Loading extension 'screenshots@mozilla.org': Reading manifest: Invalid extension permission: about:reader*
+1624567250996	Marionette	INFO	Listening on port 40547
+1624567251031	Marionette	WARN	TLS certificate errors will be ignored for this session
+JavaScript error: https://a.quora.com/qevents.js, line 1: TypeError: e.queue is undefined
+console.error: (new Error("SessionFile is closed", "resource:///modules/sessionstore/SessionFile.jsm", 433))
+1624567313967	geckodriver	INFO	Listening on 127.0.0.1:50907
+1624567313972	mozrunner::runner	INFO	Running command: "/usr/bin/firefox" "--marionette" "-foreground" "-no-remote" "-profile" "/tmp/rust_mozprofileFSiGBs"
+1624567315150	addons.webextension.doh-rollout@mozilla.org	WARN	Loading extension 'doh-rollout@mozilla.org': Reading manifest: Invalid extension permission: networkStatus
+1624567316410	Marionette	INFO	Stopped listening on port 40547
+1624567319017	addons.webextension.screenshots@mozilla.org	WARN	Loading extension 'screenshots@mozilla.org': Reading manifest: Invalid extension permission: mozillaAddons
+1624567319017	addons.webextension.screenshots@mozilla.org	WARN	Loading extension 'screenshots@mozilla.org': Reading manifest: Invalid extension permission: telemetry
+1624567319017	addons.webextension.screenshots@mozilla.org	WARN	Loading extension 'screenshots@mozilla.org': Reading manifest: Invalid extension permission: resource://pdf.js/
+1624567319017	addons.webextension.screenshots@mozilla.org	WARN	Loading extension 'screenshots@mozilla.org': Reading manifest: Invalid extension permission: about:reader*
+1624567322730	Marionette	INFO	Listening on port 42061
+1624567322805	Marionette	WARN	TLS certificate errors will be ignored for this session
+JavaScript error: https://cdn.ckeditor.com/4.11.1/full-all/ckeditor.js, line 249: Error: [CKEDITOR.resourceManager.load] Resource name "autocomplete" was not found at "https://cdn.ckeditor.com/4.11.1/full-all/plugins/autocomplete/plugin.js?t=IA8F".
+Exiting due to channel error.
+1624567363553	geckodriver	INFO	Listening on 127.0.0.1:33033
+1624567363558	mozrunner::runner	INFO	Running command: "/usr/bin/firefox" "--marionette" "-foreground" "-no-remote" "-profile" "/tmp/rust_mozprofileUkprum"
+1624567364181	addons.webextension.doh-rollout@mozilla.org	WARN	Loading extension 'doh-rollout@mozilla.org': Reading manifest: Invalid extension permission: networkStatus
+1624567365948	addons.webextension.screenshots@mozilla.org	WARN	Loading extension 'screenshots@mozilla.org': Reading manifest: Invalid extension permission: mozillaAddons
+1624567365949	addons.webextension.screenshots@mozilla.org	WARN	Loading extension 'screenshots@mozilla.org': Reading manifest: Invalid extension permission: telemetry
+1624567365949	addons.webextension.screenshots@mozilla.org	WARN	Loading extension 'screenshots@mozilla.org': Reading manifest: Invalid extension permission: resource://pdf.js/
+1624567365949	addons.webextension.screenshots@mozilla.org	WARN	Loading extension 'screenshots@mozilla.org': Reading manifest: Invalid extension permission: about:reader*
+1624567370178	Marionette	INFO	Listening on port 41181
+1624567370280	Marionette	WARN	TLS certificate errors will be ignored for this session
+JavaScript error: https://a.quora.com/qevents.js, line 1: TypeError: e.queue is undefined
+1624567418547	Marionette	INFO	Stopped listening on port 41181
+console.error: (new Error("SessionFile is closed", "resource:///modules/sessionstore/SessionFile.jsm", 433))
