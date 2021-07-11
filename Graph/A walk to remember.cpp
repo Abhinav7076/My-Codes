@@ -1,3 +1,6 @@
+#include<bits/stdc++.h>
+using namespace std;
+
 class Solution
 {
 	public:
@@ -12,16 +15,17 @@ class Solution
         st.push(val);
     }
     
-    void revdfs(int val, vector<int> adj[], vector<bool> &visited){
+    void revdfs(int val, vector<int> adj[], vector<bool> &visited, vector<int> &ans){
     // cout<<val;
+    ans.push_back(val);
     visited[val] = true;
     for(auto x:adj[val]){
         if(visited[x]==false)
-            revdfs(x,adj,visited);
+            revdfs(x,adj,visited,ans);
         }
     }
 
-    int kosaraju(int N, vector<int> adj[])
+    void kosaraju(int N, vector<int> adj[])
     {
         //code here
     //vector<vector<int> > v(N);
@@ -45,19 +49,63 @@ class Solution
 	}
 	
 	
-	int c=0;
+	vector<int> indicator(N,0);
 	while(!st.empty()){
 	    int t = st.top();
 	    st.pop();
 	    if(!visited[t]){
-	        //cout<<"SCC : ";
-	        revdfs(t, v2, visited);
-	        c++;
-	        //cout<<endl;
+            vector<int> ans;
+	        
+	        revdfs(t, v2, visited, ans);
+            // cout<<"SCC : "<<ans.size();
+            if(ans.size()>2){
+                for(int i=0;i<ans.size();i++)
+                    indicator[ans[i]] = 1;
+            }
+                // cout<<endl;
 	    }
 	}
 	
-	return c;
+    for(int i=0;i<N;i++) 
+        cout<<indicator[i]<<" ";
+    
+	return;
 	
     }
 };
+
+int main() {
+
+	// Write your code here
+	ios_base::sync_with_stdio(false);
+	cin.tie(NULL);
+    int V,E;
+    cin>>V>>E;
+    vector<int>adj[V];
+    for(int i = 0; i < E; i++){
+        int u, v;
+        cin >> u >> v;
+        adj[u-1].push_back(v-1);
+    }
+    Solution ob;
+    ob.kosaraju(V,adj);
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
