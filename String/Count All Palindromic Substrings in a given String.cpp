@@ -26,6 +26,7 @@ int CountPS(char s[], int n)
     int c=0;
     for(int gap=0;gap<n;gap++){
         for(int i=0,j=gap;j<n;i++,j++){
+            // cout<<string(s.begin()+i, s.begin()+j+1)<<endl;
             if(dp[i][j] == 1)
             c++;
         }
