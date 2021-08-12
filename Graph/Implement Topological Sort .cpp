@@ -10,7 +10,7 @@ class Solution
 	    queue<int> q;
 	    for(int i=0;i<V;i++){
 	        for(auto x:adj[i]){
-	            in[x]++;
+	            in[x]++; //neighbours ki indegree badhao
 	        }
 	    }
 	    for(int i=0;i<V;i++){

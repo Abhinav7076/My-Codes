@@ -1,6 +1,6 @@
 class Solution {
 public:
-    struct node{
+	struct node{
       int u,v,wt;
       node(int f, int s, int weight){
           u=f;
@@ -12,8 +12,8 @@ public:
 	    // Code here
 	   // for(int k=0;k<n;k++){
 	        
-	        int inf=100000;
-	      vector<int> dist(n,inf);
+	    int inf=100000;
+	    vector<int> dist(n,inf);
 	    dist[0] = 0;
 	    
 	    
@@ -24,15 +24,14 @@ public:
 	        }
 	    }
 	    int f=0;
-	    for(auto x:edges){
-	        for(auto x:edges){
-	            if(dist[x[0]] + x[2] < dist[x[1]]){
-	                dist[x[1]] = dist[x[0]] + x[2];
-	                f=1;
-	                break;
-	            }
-	        }
-	    }
+      for(auto x:edges){
+          if(dist[x[0]] + x[2] < dist[x[1]]){
+              dist[x[1]] = dist[x[0]] + x[2];
+              f=1;
+              break;
+          }
+      }
+  
 	
     return f;
 
