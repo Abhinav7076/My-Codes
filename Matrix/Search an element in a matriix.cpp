@@ -2,25 +2,24 @@
 class Solution {
 public:
     bool searchMatrix(vector<vector<int>>& matrix, int target) {
-        int t_row=INT_MAX;
-        for(int i=0;i<matrix.size();i++){
-            if(target==matrix[i][matrix[0].size()-1]){
+        int r=matrix.size();
+        int c=matrix[0].size();
+        if(target<matrix[0][0] and target>matrix[r-1][c-1])
+            return false;
+        
+        int t_row=-1;
+        for(int i=0;i<r;i++){
+            if(matrix[i][c-1] == target)
                 return true;
-            }
-            else if(target<matrix[i][matrix[0].size()-1]){
+            else if(matrix[i][c-1] > target){
                 t_row=i;
                 break;
             }
         }
-        cout<<t_row;
-        if(t_row==INT_MAX)
+        if(t_row == -1)
             return false;
         
-        for(int i=0;i<matrix[0].size();i++){
-            if(matrix[t_row][i]==target)
-                return true;
-        }
-        return false;
+        return binary_search(matrix[t_row].begin(), matrix[t_row].end(), target);
     }
 };
 
