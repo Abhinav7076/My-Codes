@@ -4,7 +4,8 @@ class Solution{
         rb[n-1] = n;
         stack<int> s;
         s.push(n-1);
-        
+        //bado ko pop karayega
+        //kisi no se chota uski boundary kehlati hai
         for(int i=n-2;i>=0;i--){
             while(s.size()>0 and arr[s.top()] >= arr[i]){ //badon ko pop kardo cuz chote hi boundary banenge
                 s.pop();
