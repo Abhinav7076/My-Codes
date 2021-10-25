@@ -1,3 +1,5 @@
+// A Divide-and-Conquer approach to find the pivot (highest) element in
+// a sorted rotated array - returns the index of the pivot -> O(log N)
 int peakElement(int arr[], int low, int high, int lowerBound, int upperBound)
 {
     int mid = low + (high - low) / 2;

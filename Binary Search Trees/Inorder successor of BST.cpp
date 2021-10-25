@@ -1,6 +1,35 @@
 class Solution{
   public:
     // returns the inorder successor of the Node x in BST (rooted at 'root')
+    Node * inOrderSuccessor(Node *root, Node *x)
+    {
+        //Your code here
+        queue<Node*> q;
+        vector<pair<int, Node*>> v;
+        
+        q.push(root);
+        while(!q.empty()){
+            Node* t = q.front();
+            v.push_back({t->data, t});
+            q.pop();
+            if(t->left)
+            q.push(t->left);
+            if(t->right)
+            q.push(t->right);
+        }
+        sort(v.begin(), v.end());
+        for(int i=0;i<v.size()-1;i++){
+            if(x->data == v[i].first)
+            return v[i+1].second;
+        }
+        return NULL;
+    }
+};
+
+//conventional
+class Solution{
+  public:
+    // returns the inorder successor of the Node x in BST (rooted at 'root')
 
     struct Node* search(Node* root, int x)
     {

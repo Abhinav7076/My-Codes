@@ -1,3 +1,5 @@
+// string banayenge, null pe delimeter return karenge 
+// aur map me string ki frequency store karte jayenge
 class Solution {
   public:
     /*This function returns true if the tree contains 

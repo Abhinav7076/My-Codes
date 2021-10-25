@@ -1,3 +1,13 @@
+/*k=4
+arr = [9, 6, 7, 6, 3, 8]
+  9 6 7 6 3 8
+  _ _ _ _ _ _
+0|0 0 0 0 0 0
+1|0          |
+2|0 . . . .  |
+3|0       . tofind
+*/
+
 class Solution {
   public:
     int maxProfit(int k, int n, int a[]) {

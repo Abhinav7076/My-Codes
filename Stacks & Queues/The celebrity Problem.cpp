@@ -14,9 +14,9 @@ class Solution
             s.pop();
             int a = s.top();
             s.pop();
-            if(M[a][b]==0)
+            if(M[a][b]==0) //agar a b ko nahi janta to b celebrity nahi hoga
             s.push(a);
-            else if(M[a][b]==1)
+            else if(M[a][b]==1) //agar a b ko janta hai to a celebrity nhi hoga
             s.push(b);
         }
         int cel = s.top();

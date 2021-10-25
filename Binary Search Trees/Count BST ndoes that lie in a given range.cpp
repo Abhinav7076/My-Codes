@@ -1,3 +1,28 @@
+int getCount(Node *root, int l, int h)
+{
+  // your code goes here  
+  if(root == NULL)
+  return 0;
+  queue<Node*> q;
+  q.push(root);
+  int c = 0;
+  while(!q.empty()){
+      Node* t = q.front();
+      q.pop();
+      
+      if(t->data >= l and t->data <=h){
+        c++;
+      }
+    //   cout<<t->data<<" "<<c<<"\n";
+      if(t->left)
+      q.push(t->left);
+      if(t->right)
+      q.push(t->right);
+  }
+  
+  return c;
+}
+
 vector<int> levelOrder(Node* root){
         queue<Node*> q;
         vector<int> v;

@@ -1,3 +1,5 @@
+// q of pair <pointer and h> and map ,agar map me value 0
+// hai to update karenge nhi to nhi -2 -1 0 1 2
 class Solution{
   public:
     // function should return the topView of the binary tree

@@ -1,3 +1,6 @@
+// range store karlo har node ka and if for any leaf node its right-left == 0 
+// then we can't insert a node at that place and hence the bst has a dead end
+
 void levelOrder(Node* root, unordered_map<int,pair<int,int>> &range){
         queue<Node*> q;
         // vector<int> v;

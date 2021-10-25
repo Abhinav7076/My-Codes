@@ -1,3 +1,4 @@
+// find lca and then find its distance from given nodes
 Node* lca(Node* root, int a,int b){
     if(!root) return NULL;
     if(root->data == a or root->data == b)

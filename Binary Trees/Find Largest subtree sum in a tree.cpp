@@ -1,3 +1,9 @@
+// Approach : Do post order traversal of the binary tree. At every node, find 
+// left subtree value and right subtree value recursively. The value of subtree
+// rooted at current node is equal to sum of current node value, left node subtree
+// sum and right node subtree sum. Compare current subtree sum with overall maximum 
+// subtree sum so far.
+
 // C++ program to find largest subtree
 // sum in a given binary tree.
 #include <bits/stdc++.h>

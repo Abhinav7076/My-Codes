@@ -1,3 +1,5 @@
+// take a height ma and store the height of first leaf and then check if 
+// the height of another leaf nofe is not equal to ma thne retyrn false
 class Solution{
   public:
     /*You are required to complete this method*/

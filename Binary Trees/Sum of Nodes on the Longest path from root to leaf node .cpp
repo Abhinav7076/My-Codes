@@ -1,3 +1,7 @@
+// stored in vector[0] : height amd v[1] : sum & solved for left and 
+// right subtree if height of left is more return it and vice versa 
+// agar left ka sum jyada hai to usse upadate kardo and vv
+
 vector<int> solve(Node* root){
     if(!root) return {0,0};
     vector<int> a = solve(root->left);

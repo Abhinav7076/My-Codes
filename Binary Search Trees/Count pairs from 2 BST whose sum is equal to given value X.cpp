@@ -1,3 +1,37 @@
+class Solution
+{private: 
+public:
+bool search(int target,Node* node){
+   if(node==nullptr) return false;
+   while(node!=nullptr)
+   {
+       if(target>node->data)
+       {
+      if(node->right) node=node->right;
+       }
+      else if(target==node->data) return true;
+      else {
+          if(node->left) node=node->left;
+      }
+   }
+}
+int treetrav(Node* rt,Node* rt2,int x){
+   static int count=0;
+   if(rt==nullptr) return 0;
+   treetrav(rt->left,rt2,x);
+   search(x-rt->data,rt2)==true?count++:count=count;
+   treetrav(rt->right,rt2,x);
+   return count;
+}
+
+int countPairs(Node* root1, Node* root2, int x)
+{
+ return treetrav(root1,root2,x);
+ 
+}
+};
+
+
 void levelOrder(Node* root, unordered_map<int, bool> &u){
         queue<Node*> q;
         vector<int> v;

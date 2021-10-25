@@ -1,4 +1,5 @@
 //evaluate reverse polish
+// It is a mathematical notation in which operators follow their operands
 class Solution {
 public:
     int evalRPN(vector<string>& tokens) {
