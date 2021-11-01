@@ -1,3 +1,7 @@
+// made a vector of a pairs and sort them on the basis of 
+// finishing time then iterate thru i=0 and j=1 :::: 
+// if(v[j].first > v[i].second) then move ahead
+
 class Solution
 {
     public:

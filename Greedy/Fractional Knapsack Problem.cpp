@@ -1,3 +1,4 @@
+// sort on the basis of w/v
 bool compareProfit(Item a, Item b)
     {
         double x = (double)a.value/a.weight;

@@ -1,0 +1,19 @@
+The sounds /p/, /ph/, and /b/ are separate phonemes. The evidence is the minimal triplet
+[pənu] 'leaf', [phənu] 'snakehood', and [bənu] 'forest'.
+The relationship between /p/ and /b/ in Sindhi is the same as it is in English (they are separate
+phonemes).
+The relationship between /p/ and /ph/ is not the same (in Sindhi they are separate phonemes and
+in English they are allophones of the same phoneme).
+
+
+the reason why /p/ and /ph/ are allophones is that while pronouncing pin, it is pronounced as phin by native speakers and pin by indian speakers. Hence [p] and [ph] do NOT produce a contrast in meaning and thus are allophones of the SAME phoneme.
+
+the reason why /p/ and /b/are separate phonemes is the minimal pair bat and pat which have different meanings. Hence [p] and [b] produce a contrast in meaning and thus are separate phonemes.
+
+
+
+/p/ /ph/ /b/ they all are allophones of different phonemes
+
+We can see that by replacing p by ph in [p@nu] it becomes [ph@nu] and similarly replacing p by b in [p@nu] it becomes [b@nu]. This makes us come to a conclusion that /p/ /ph/ /b/ they all are allophones of different phonemes.
+
+No, the relationship among the sounds is not the same as in English. In English /p/ /ph/ are allopjhones of phoneme /p/ whereas /b/ and /p/ are allophones of different phonemes. 
