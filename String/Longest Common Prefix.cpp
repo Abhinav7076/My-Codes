@@ -1,3 +1,5 @@
+// solved using 2 for loops or can do while this prefix is 
+// not at the starting of another decrement b=its length by 1 
 class Solution {
 public:
     string longestCommonPrefix(vector<string>& strs) {

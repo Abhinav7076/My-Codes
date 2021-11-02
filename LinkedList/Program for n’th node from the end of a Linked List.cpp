@@ -1,3 +1,4 @@
+//method 1 :
 int findLen(struct Node* head){
     int len = 0;
     while(head!=NULL){
@@ -17,7 +18,7 @@ int getNthFromLast(struct Node *head, int n)
     return head->data;
 }
 
-//recursive
+//method 2 : recursive
 void printNthFromLast(struct Node* head, int n)
 {
     int i = 0;

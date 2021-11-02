@@ -1,3 +1,5 @@
+// if smaller than a then swap with a[l] and 
+// similarly for white
 class Solution{   
 public:
     //Function to partition the array around the range such 

@@ -1,3 +1,5 @@
+//minimize the range
+// x(left) ko ham chah rahe ki bada ho jaye and y(right) chota hote jaye
 class Solution {
   public:
     int getMinDiff(int arr[], int n, int k) {

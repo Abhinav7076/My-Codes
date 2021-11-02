@@ -1,3 +1,11 @@
+// We recursively perform three steps:
+
+// 1. Bring the pivot to its apropiate position such that left of the pivot is smaller and right is greater.
+
+// 2. Quick sort the left part.
+
+// 3. Quick sort the right part.
+
 // It picks an element as pivot and partitions the given array around the picked pivot. There are many different versions of quickSort that pick pivot in different ways. 
 
 // Always pick first element as pivot.

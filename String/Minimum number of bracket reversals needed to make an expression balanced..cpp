@@ -1,3 +1,5 @@
+// store the position of [ in array 
+// then if count <0 total+=v[i]-i
 int countRev (string s)
 {
     // your code here
