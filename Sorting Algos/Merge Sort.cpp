@@ -1,3 +1,4 @@
+The Merge Sort use the Divide-and-Conquer approach to solve the sorting problem. First, it divides the input in half using recursion. After dividing, it sort the halfs and merge them into one sorted output.
 class Solution {
 public:
     void merge(vector<int>& nums, int l, int mid, int r){

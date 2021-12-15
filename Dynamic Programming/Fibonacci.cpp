@@ -43,3 +43,62 @@ int main ()
 }
 
 // This code is contributed by SoumikMondal
+
+#include<iostream>
+#include<cmath>
+ 
+int fib(int n) {
+  double phi = (1 + sqrt(5)) / 2;
+  return round(pow(phi, n) / sqrt(5));
+}
+ 
+// Driver Code
+int main ()
+{
+  int n = 9;
+  std::cout << fib(n) << std::endl;
+  return 0;
+}
+//-----------------------------------------------------------
+// O(log n)
+
+#include<iostream>
+#include<cmath>
+ 
+int fib(int n) {
+  double phi = (1 + sqrt(5)) / 2;
+  return round(pow(phi, n) / sqrt(5));
+}
+ 
+// Driver Code
+int main ()
+{
+  int n = 9;
+  std::cout << fib(n) << std::endl;
+  return 0;
+}
+
+//-----------------------------------------------------------
+//Fibonacci Series using Recursion
+#include<bits/stdc++.h>
+using namespace std;
+
+int fib(int n)
+{
+	if (n <= 1)
+		return n;
+	return fib(n-1) + fib(n-2);
+}
+
+int main ()
+{
+	int n = 9;
+	cout << fib(n);
+	getchar();
+	return 0;
+}
+
+// This code is contributed
+// by Akanksha Rai
+
+// O(n)
