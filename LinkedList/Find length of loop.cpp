@@ -15,7 +15,7 @@ int countNodesinLoop(struct Node *head)
             cur=cur->next;
         }
         else{
-            return abs(u[prev] - u[cur] + 1);
+            return u[prev] - u[cur] + 1;
         }
     }
     return 0;

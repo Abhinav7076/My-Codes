@@ -9,7 +9,7 @@ public:
         vector<vector<int>>::iterator it;
         it=intervals.begin();
         int i=0,j=1;
-        for(i=0;i<intervals.size()-1 && j<intervals.size();){
+        for(i=0;i<intervals.size() && j<intervals.size();){
             
             
             if(intervals[i][1]>=intervals[j][0]){

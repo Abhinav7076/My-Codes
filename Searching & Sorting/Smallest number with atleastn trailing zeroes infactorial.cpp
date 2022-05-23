@@ -17,9 +17,6 @@ class Solution
         int findNum(int n)
         {
         //complete the function here
-        if(n==1)
-        return 5;
-        
         int low=0;
         int high=5*n;
         

@@ -7,6 +7,7 @@ public:
             return 1;
             else return 0;
         }
+        // 4 -12 4
         if((b-a)/c < 0)
             return 0;
             

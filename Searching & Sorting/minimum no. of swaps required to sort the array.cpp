@@ -1,3 +1,4 @@
+//first check if that number is in its right position
 class Solution 
 {
     public:
@@ -14,7 +15,7 @@ class Solution
 	    vector<bool> visited(n);
 	    
 	    for(int i=0;i<n;i++){
-	        if(visited[i] or v[i].second == i)
+	        if(visited[i] or v[i].second == i) //if it is right position
 	            continue;
 	        
 	        int cycle_len=0;

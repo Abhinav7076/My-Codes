@@ -18,6 +18,7 @@ int main() {
 		while(lb<=ub){
 			int mid = (lb+ub)/2;
 			//fixing first cow at first position
+			//prev stores position of last cow
 			int cows = 1;
 			int prev = arr[0];
 			for(int i=1;i<n;i++){

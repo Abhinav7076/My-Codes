@@ -53,7 +53,7 @@ void rearrange(int arr[], int n)
 
 		// if no entry has been flagged out-of-place
 		if (outofplace == -1) {
-			// check if current entry is out-of-place
+			// check if current entry is out-of-place | index & 0x01 will be 1 if and only if index is odd. 
 			if (((arr[index] >= 0) && (!(index & 0x01)))
 				|| ((arr[index] < 0) && (index & 0x01))) {
 				outofplace = index;

@@ -30,3 +30,5 @@ class Solution
 
     }
 };
+
+// In fact, you can get a tighter bound on the step count if you note that when there's a loop, the slow pointer will get to it in N - M steps, so the total step count is <= N.

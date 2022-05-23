@@ -4,19 +4,15 @@ class Solution{
     bool subArrayExists(int arr[], int n)
     {
         //Your code here
-        set<int> s;
-        int sum=0;
-        bool found=false;
+        unordered_set<int> s;
+        int sum = 0;
         for(int i=0;i<n;i++){
             s.insert(sum);
-            sum+=arr[i];
-            if(s.find(sum)!=s.end()){
-                found=true;
-                break;
+            sum += arr[i];
+            if(s.find(sum) != s.end()){
+                return true;
             }
         }
-        return found;
-        
-        
+        return false;
     }
 };

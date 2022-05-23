@@ -24,7 +24,8 @@ int findLongestConseqSubseq(int arr[], int n)
         for (int i = 0; i < n; i++)
         {
             // if current element is the starting
-            // element of a sequence
+            // element of a sequence 
+            // arr[i] starting element hoga agar arr[i] - 1 nahi present hais
             if (!u[arr[i] - 1])
             {
                 // Then check for next elements

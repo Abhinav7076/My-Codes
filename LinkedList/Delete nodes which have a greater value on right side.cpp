@@ -1,3 +1,13 @@
+Node *compute(Node *head)
+    {
+        // your code goes here
+        if (!head || !head->next) return head;  // Base Case.
+        Node* x = compute(head->next);
+        (head->data >= x->data) ? head->next = x : head = x;
+        return head;
+        
+    }
+    
 class Solution
 {
     public:

@@ -1,3 +1,34 @@
+struct mycomp {
+    bool operator()(Node* a, Node* b)
+    {
+        // return "true" if "b" is ordered
+        // before "a", for example:
+        return a->data > b->data;
+    }
+};
+void flatten(Node* root)
+{
+    priority_queue<Node*, vector<Node*>, mycomp> p;
+  //pushing main link nodes into priority_queue.
+    while (root!=NULL) {
+        p.push(root);
+        root = root->next;
+    }
+   
+    while (!p.empty()) {
+      //extracting min
+        auto k = p.top();
+        p.pop();
+      //printing  least element
+        cout << k->data << " ";
+        if (k->bottom)
+            p.push(k->bottom);
+    }
+    
+}
+// Time Complexity: O(N*M*log(N))
+
+//method 2
 Node *flatten(Node *root)
 {
    // Your code here
