@@ -7,8 +7,8 @@ class Solution
         if(!node) return 0;
         int x = func(node->left);
         int y = func(node->right);
-        ma = max(ma, x+y+1);
-        return (max(x,y)+1);
+        ma = max(ma, x+y+1); //height of left subtree + height of right subtree 
+        return (max(x,y)+1); //returning height
     }
     int diameter(Node* root)
     {
@@ -19,3 +19,6 @@ class Solution
     }
 
 };
+
+//time complexity = O(n) since visitong every node once
+//space complexity = O(n) considering recursion stack

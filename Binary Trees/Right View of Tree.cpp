@@ -1,3 +1,4 @@
+// Right view of a Binary Tree is set of nodes visible when tree is viewed from right side.
 class Solution
 {
     public:

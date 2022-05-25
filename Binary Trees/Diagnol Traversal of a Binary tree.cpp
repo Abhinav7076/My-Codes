@@ -16,3 +16,5 @@ vector<int> diagonal(Node *root)
    }
    return v;
 }
+
+// Time compelxity = O(n)

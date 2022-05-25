@@ -17,7 +17,8 @@ class Solution
 	    for(int i=0;i<n;i++){
 	        if(visited[i] or v[i].second == i) //if it is right position
 	            continue;
-	        
+	        // find out the number of  node in
+        	// this cycle and add in ans
 	        int cycle_len=0;
 	        int j=i;
 	        while(visited[j] == false){

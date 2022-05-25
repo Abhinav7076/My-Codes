@@ -1,4 +1,5 @@
 // saare roots ko uthao aur fir khali kardo
+// Left view of a Binary Tree is set of nodes visible when tree is visited from Left side. 
 vector<int> leftView(Node *root)
 {
    // Your code here

@@ -1,16 +1,16 @@
 vector <int> bottomView(Node *root)
 {
    // Your Code Here
-   vector<int> v;
+        vector<int> v;
         queue<pair<Node*, int> > q;
-        map<int,int> m;
+        map<int,Node*> m;
         q.push({root, 0});
         while(!q.empty()){
             Node* t =q.front().first;
             int h = q.front().second;
             q.pop();
             
-            m[h] = t->data;
+            m[h] = t;
             
             if(t->left)
             q.push({t->left,h-1});
@@ -19,6 +19,6 @@ vector <int> bottomView(Node *root)
             q.push({t->right,h+1});
         }
         
-        for(auto x:m) v.push_back(x.second);
+        for(auto x:m) v.push_back(x.second->data);
         return v;
 }

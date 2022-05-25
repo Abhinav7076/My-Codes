@@ -1,3 +1,38 @@
+class Solution{
+  public:
+    /*You are required to complete this method*/
+    bool check(Node *root)
+    {
+        //Your code here
+        queue<Node*> q;
+        q.push(root);
+        int ans = -1;
+        int level = 0;
+        while(!q.empty()){
+            int size = q.size();
+            while(size--){
+                Node* t = q.front();
+                q.pop();
+                if(!t->left and !t->right){
+                    if(ans == -1)
+                        ans = level;
+                    else if(level != ans)
+                        return false;
+                }
+                if(t->left)
+                    q.push(t->left);
+                if(t->right)
+                    q.push(t->right);
+            }
+            level++;
+        }
+        return true;
+    }
+};
+
+//time complexity = O(n) coz we are visiting every node once
+
+
 // take a height ma and store the height of first leaf and then check if 
 // the height of another leaf nofe is not equal to ma thne retyrn false
 class Solution{

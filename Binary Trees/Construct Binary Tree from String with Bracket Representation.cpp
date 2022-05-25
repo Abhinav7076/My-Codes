@@ -1,3 +1,4 @@
+// We need to find the substring corresponding to left subtree and substring corresponding to right subtree and then recursively call on both of the substrings. 
 // For this first find the index of starting index and end index of each substring. 
 // To find the index of closing parenthesis of left subtree substring, use a stack. 
 // Let the found index be stored in index variable. 

@@ -10,3 +10,6 @@ class Solution{
         return (max(x,y)+1);
     }
 };
+
+//time complexity = O(n) since visitong every node once
+//space complexity = O(n) considering recursion stack

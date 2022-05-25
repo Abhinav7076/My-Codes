@@ -7,6 +7,9 @@ using namespace std;
 
 /* prints element and res pair for all
 elements of arr[] of size n */
+
+// If next is greater than the top element, Pop element from stack. next is the next greater element for the popped element.
+// Keep popping from the stack while the popped element is smaller than next. next becomes the next greater element for all such popped elements.
 void printNGE(int arr[], int n)
 {
 	stack<int> s;
@@ -40,3 +43,5 @@ int main()
 	printNGE(arr, n);
 	return 0;
 }
+
+// Time Complexity: O(N) 

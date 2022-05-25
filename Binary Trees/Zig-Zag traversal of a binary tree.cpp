@@ -32,3 +32,5 @@ vector <int> zigZagTraversal(Node* root)
 	}
 	return v;
 }
+
+//time complexity = O(n) , since we are going through every node once
