@@ -1,3 +1,5 @@
+// topological sort or topological ordering of a directed graph is a linear ordering of its vertices such that for every directed edge uv from vertex u to vertex v, u comes before v in the ordering.
+
 class Solution
 {
 	public:
@@ -30,3 +32,11 @@ class Solution
 	    return ans;
 	}
 };
+
+// The Applications of Topological Sort are:
+// Finding cycle in a graph.
+// Operation System deadlock detection. : Topological sorting is used here to identify a cycle. If the wait-for graph has a cycle, then there is deadlock.
+// Dependency resolution. Suppose, A class extends B class. and B also extends A In this case, the java compiler tries to detect circular dependency.
+// Course Schedule problem. : There are some courses and they may have some prerequisite courses. One can finish courses in some order.
+// Sentence Ordering.
+// Critical Path Analysis.

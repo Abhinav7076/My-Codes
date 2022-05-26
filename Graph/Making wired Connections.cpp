@@ -1,3 +1,4 @@
+//count the connected components
 class Solution {
 public:
     void dfs(int val, vector<int> v[], vector<bool> &visited){

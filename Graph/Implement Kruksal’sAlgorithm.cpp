@@ -1,4 +1,16 @@
+// Kruskal's Algorithm is used to find the minimum spanning tree for a connected weighted graph.
+// A spanning tree of a graph is a collection of connected edges that include every vertex in the graph, but that do not form a cycle. 
+// Many such spanning trees may exist for a graph. The Minimum Spanning Tree is the one whose cumulative edge weights have the smallest value
 //gfg
+
+//here we are going to store graph in a data structure 
+
+// steps
+// sort all the edges on the basis of edge weight
+// pick and check if they don't belong to same component using disjoint data set
+//how to check if they are in differnet compnent, check their parent and if they are same it means same comonent and vv
+// jispe attach kar rahe uska rank badha do
+//smaller ranks will get connected to higher rank
 class Solution
 {
 	public:
@@ -115,7 +127,7 @@ void unionn(int u, int v, vector<int> &parent, vector<int> &rank) {
     }
     else {
         parent[v] = u;
-        rank[u]++; 
+        rank[u]++; // jispe attach kar rahe uska rank badha do
     }
 }
 int main(){
@@ -131,13 +143,13 @@ int main(){
     
     vector<int> parent(N);
     for(int i = 0;i<N;i++) 
-        parent[i] = i; 
+        parent[i] = i; //starting everyone is disconncted so they are parent of themselves
     vector<int> rank(N, 0); 
-    
+    //how to check if they are in differnet compnent, check their parent and if they are same it means same comonent and vv
     int cost = 0;
     vector<pair<int,int>> mst; 
     for(auto it : edges) {
-        if(findPar(it.v, parent) != findPar(it.u, parent)) {
+        if(findPar(it.v, parent) != findPar(it.u, parent)) { //this means connext if they elong to different component
             cost += it.wt; 
             mst.push_back({it.u, it.v}); 
             unionn(it.u, it.v, parent, rank); 
@@ -147,3 +159,7 @@ int main(){
     for(auto it : mst) cout << it.first << " - " << it.second << endl; 
     return 0;
 }
+
+// time complexity : O(m log(m)) + O(m+O(4*alpha))
+// m : edges
+// O(4*alpha) = O(4)

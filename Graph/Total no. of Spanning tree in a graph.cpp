@@ -5,6 +5,10 @@
     where N is the number of nodes.
 */
 
+// for complete graph(every pair of vertices is connected by a line segment.) total number of spanning trees is n^(n-2)
+// What if graph is not complete?
+//degree matrix - adjacency matrix = laplacian matrix
+// no of spanning tree : find cofactor of any element
 #include <cmath>
 
 int findDeterminant(vector<vector<int>> Matrix)

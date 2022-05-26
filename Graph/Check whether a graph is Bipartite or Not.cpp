@@ -9,7 +9,7 @@ int f=0;
 	        if(visited[node]==-1){
 	            dfs(node, val, 3-col, visited, adj);
 	        }
-	        else if(node!=val and visited[node] == col){
+	        else if(node!=val and visited[node] == col){ //agar same edge nahi hai and adjacent node ka color bhi same hai then return 1
 	            f=1;
 	            break;
 	        }

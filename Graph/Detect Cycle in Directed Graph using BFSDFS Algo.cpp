@@ -1,4 +1,5 @@
 //dfs to check node if it was called in same visited call
+// if the node comes again and if its true then there is a cycle
 class Solution
 {
     public:
@@ -35,3 +36,35 @@ class Solution
 	    return false;
 	}
 };
+
+// Kahn's algorithm
+// using BFS
+// a topological sort or topological ordering of a directed graph is a linear ordering of its vertices such that for every directed edge uv from vertex u to vertex v, u comes before v in the ordering
+// is only applicable for DAG
+
+bool isCyclic(int V, vector<int> adj[]) {
+        // code here
+        queue<int> q;
+        vector<int> indegree(V, 0);
+        for(int i=0;i<V;i++){
+            for(auto it: adj[i])
+                indegree[it]++;
+        }
+        for(int i=0;i<V;i++){
+            if(indegree[i] == 0)
+                q.push(i);
+        }
+        int c = 0;
+        while(!q.empty()){
+            int t = q.front();
+            q.pop();
+            c++;
+            for(auto it:adj[t]){
+                indegree[it]--;
+                if(indegree[it] == 0)
+                    q.push(it);
+            }
+        }
+        if(c == V) return false; //topological sort successfull hence no cycle
+        return true;
+    }

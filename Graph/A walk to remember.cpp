@@ -1,6 +1,9 @@
 #include<bits/stdc++.h>
 using namespace std;
 
+// print the strongly connected components
+// graph starting at node u is a simple path that begins and ends at the same node u.
+
 class Solution
 {
 	public:

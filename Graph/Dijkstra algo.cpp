@@ -1,3 +1,6 @@
+// Dijkstra's algorithm allows us to find the shortest path between any two vertices of a graph.
+
+// It differs from the minimum spanning tree because the shortest distance between two vertices might not include all the vertices of the graph
 #include<bits/stdc++.h>
 using namespace std;
 
@@ -33,6 +36,10 @@ void Dijkstra(int n, int source){
 	cout << "\n";
 	
 }
+
+//Time complexity O(n+e)log n
+// n for all the nodes + e for all adjacent edges we are traversing, log n for priority queue
+//space complexity = O(n) + O(n)
 
 int main(){
 	int n,m,source;

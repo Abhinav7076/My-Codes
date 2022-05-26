@@ -1,10 +1,12 @@
+// use bitmasking 0000 means no city has been visited, 1111=2^4-1 means all cities have been visited
+// min hqmiltonian cycle is a cycle that visits each node exactly once 
 class Solution {
 public:
 
 int  tsp(int mask,int pos, int VISITED_ALL, int n, vector<vector<int>>cost, vector<vector<int>> &dp){
 	
 	if(mask==VISITED_ALL){
-		return cost[pos][0];
+		return cost[pos][0]; //[current city][starting city]
 	}
 	if(dp[mask][pos]!=-1){
 	   return dp[mask][pos];
@@ -37,3 +39,5 @@ int total_cost(vector<vector<int>>cost){
     return tsp(1, 0, VISITED_ALL, cost.size(), cost, dp);
 }
 };
+
+// time complexity : O((2^n)*n)

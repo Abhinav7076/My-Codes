@@ -58,3 +58,5 @@ class Solution
 
 	}
 };
+
+//time complecxity = O(n^2)

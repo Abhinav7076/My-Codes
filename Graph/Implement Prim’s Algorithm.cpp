@@ -1,3 +1,12 @@
+// prim's algo helps us to find mst
+//steps
+//start with a node and check which is the minimum edge attached to it
+//check all adjacent edges of both(n) nodes
+//key : 
+// pick up index having lowest key value and mark that index true in mst
+// visiting node's neighbours do 2ops : 1st : update key value and mark their parent
+// look for next node in mst : doing this scroll through key array and pick the minimum value
+// ends result : start from node 0 see the parent array and construct the mst
 class Solution
 {
 	public:
@@ -82,7 +91,7 @@ int main(){
         key[i] = INT_MAX, mstSet[i] = false; 
     
     priority_queue< pair<int,int>, vector <pair<int,int>> , greater<pair<int,int>> > pq;
-
+    // key : key weight and value : node
     key[0] = 0; 
     parent[0] = -1; 
     pq.push({0, 0});
@@ -123,3 +132,5 @@ int main(){
         cout << parent[i] << " - " << i <<" \n"; 
     return 0;
 }
+
+// time complexity : O(n log(n))

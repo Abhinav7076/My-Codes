@@ -1,3 +1,4 @@
+// go on relaxing all the edges n-1 times
 class Solution {
 public:
     struct node{

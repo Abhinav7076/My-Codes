@@ -1,3 +1,4 @@
+// Bridge. i.e., removing the edge disconnects the graph.
 class Solution
 {
 	public:

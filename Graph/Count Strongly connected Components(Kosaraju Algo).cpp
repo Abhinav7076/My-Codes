@@ -1,3 +1,9 @@
+// kosaraju algorithm helps us to find all strongly connected components
+// scc: if you start from any node you can reach any node
+// steps:-
+// 1.sort all algorithms in order of finishing time(use topological sort)
+// 2. transpose the graph
+// 3. do the dfs of new graph according to finishing time
 class Solution
 {
 	public:
@@ -25,8 +31,7 @@ class Solution
     {
         //code here
     //vector<vector<int> > v(N);
-	vector<int> v2[N];
-
+	
 	vector<bool> visited(N);
 	//v.resize(N+1);
 	stack<int> st;
@@ -36,12 +41,13 @@ class Solution
 	    }
 	   // cout<<endl;
 	}
-	
+
+	vector<int> transpose[N];
+
 	for(int i=0;i<N;i++){
 	    visited[i] = false;
-	    for(int j=0;j<adj[i].size();j++){
-	        v2[adj[i][j]].push_back(i);
-	    }
+	    for(auto it:adj[i])
+	    	transpose[it].push_back(i);
 	}
 	
 	
@@ -51,7 +57,7 @@ class Solution
 	    st.pop();
 	    if(!visited[t]){
 	        //cout<<"SCC : ";
-	        revdfs(t, v2, visited);
+	        revdfs(t, transpose, visited);
 	        c++;
 	        //cout<<endl;
 	    }
@@ -61,3 +67,5 @@ class Solution
 	
     }
 };
+
+// time complexity = O(N) + O(N+E) + O(N+E)

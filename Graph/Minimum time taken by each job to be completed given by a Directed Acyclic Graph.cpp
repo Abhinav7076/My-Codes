@@ -1,4 +1,17 @@
+// Approach: The job can be started only if all the jobs that are prerequisites of the job that are done. Therefore, the idea is to use Topological Sort for the given network. Below are the steps:
+
+// Finish the jobs that are not dependent on any other job.
+// Create an array inDegree[] to store the count of the dependent node for each node in the given network.
+// Initialize a queue and push all the vertex whose inDegree[] is 0.
+// Initialize the timer to 1 and store the current queue size(say size) and do the following:
+// Pop the node from the queue until the size is 0 and update the finishing time of this node to the timer.
+// While popping the node(say node U) from the queue decrement the inDegree of every node connected to it.
+// If inDegree of any node is 0 in the above step then insert that node in the queue.
+// Increment the timer after all the above steps.
+// Print the finishing time of all the nodes after we traverse every node in the above step.
 // C++ program for the above approach
+
+//TOPOLOGICAL SORT
 #include <bits/stdc++.h>
 using namespace std;
 #define maxN 100000
@@ -106,3 +119,7 @@ int main()
 	printOrder(n, m);
 	return 0;
 }
+
+// 1 1 2 2 2 3 4 5 2 6 <- Output
+
+// Time Complexity: O(V+E),

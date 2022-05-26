@@ -34,3 +34,5 @@ class Solution{
         return v;
     }
 };
+
+// time complexity = O(n^2)^4 coz we are searching at every positiona dn at every position we are searching in all the 4 directions
