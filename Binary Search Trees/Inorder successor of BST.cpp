@@ -1,3 +1,4 @@
+// if right subtree is there then anser is min(right subtree) else goto the nearest ancestor that is unvisited
 class Solution{
   public:
     // returns the inorder successor of the Node x in BST (rooted at 'root')

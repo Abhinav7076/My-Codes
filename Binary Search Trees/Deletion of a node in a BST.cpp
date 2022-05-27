@@ -1,3 +1,5 @@
+// 3 cases. 4 in 3rd subcase are simple so if node to be deleted has right and left child then pick the max val from left subtree and store its value in root and then delete it from left subtree
+
 class Solution {
 public:
     int findMax(TreeNode* root){
