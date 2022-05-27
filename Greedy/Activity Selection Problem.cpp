@@ -7,6 +7,11 @@ class Solution
     public:
     //Function to find the maximum number of meetings that can
     //be performed in a meeting room.
+    bool sortbysec(const pair<int,int> &a,
+              const pair<int,int> &b)
+    {
+    return (a.second < b.second);
+    }
     int maxMeetings(int start[], int end[], int n)
     {
         // Your code here

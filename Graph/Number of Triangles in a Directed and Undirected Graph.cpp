@@ -15,6 +15,7 @@ using namespace std;
 // graph. isDirected is true if
 // the graph is directed, its
 // false otherwise
+// The idea is to use three nested loops to consider every triplet (i, j, k) and check for the above condition (there is an edge from i to j, j to k and k to i) 
 int countTriangle(int graph[V][V],
 				bool isDirected)
 {
@@ -73,3 +74,4 @@ int main()
 
 	return 0;
 }
+// The time complexity is O(n3)

@@ -5,30 +5,24 @@
 #include <string.h>
 using namespace std;
 
-// function to find minimum elements needed.
-int minElements(int arr[], int n)
-{
-	// calculating HALF of array sum
-	int halfSum = 0;
-	for (int i = 0; i < n; i++)
-		halfSum = halfSum + arr[i];
-	halfSum = halfSum / 2;
-
-	// sort the array in descending order.
-	sort(arr, arr + n, greater<int>());
-
-	int res = 0, curr_sum = 0;
-	for (int i = 0; i < n; i++) {
-
-		curr_sum += arr[i];
-		res++;
-
-		// current sum greater than sum
-		if (curr_sum > halfSum)		
-			return res;
-	}
-	return res;
-}
+class Solution{
+    public:
+    int minSubset(vector<int> &arr,int N){
+        if(N==1)
+        return 1;
+        sort(arr.begin(), arr.end());
+        long long int sum = accumulate(arr.begin(), arr.end(), 0ll);
+        long long int subsetsum = 0, res = 0;
+        for(int i=N-1;i>=0;i--){
+            subsetsum += arr[i];
+            sum -= arr[i];
+            res++;
+            if(subsetsum>sum)
+                return res;
+        }
+        return N; //0 0 <-TC
+    }
+};
 
 // Driver function
 int main()

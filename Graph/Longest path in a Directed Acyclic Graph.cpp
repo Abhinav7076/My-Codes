@@ -1,6 +1,9 @@
 #include<bits/stdc++.h>
 using namespace std;
- 
+
+// steps
+// store order wrt fininshing time and reverse the order
+// update distance according to order
 
 vector<int> order;
 

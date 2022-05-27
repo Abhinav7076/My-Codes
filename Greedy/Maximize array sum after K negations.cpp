@@ -13,6 +13,8 @@ class Solution{
             else
             break;
         }
+        // agar left k even hai to use - kark fir negative kar sakte to neutralise
+        // agar left k-i odd hai to arr[i] ko minus kardo
         if((k-i)%2==1)
         arr[i] = -arr[i];
         
