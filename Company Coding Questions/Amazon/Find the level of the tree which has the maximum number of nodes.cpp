@@ -1,3 +1,30 @@
+int maxNodeLevel(Node *root)
+{
+ // Add your code here
+    if(root == NULL)
+        return 0;
+    queue<Node*> q;
+    q.push(root);
+    int ma = 0, level = 0, ans = 0;
+    while(!q.empty()){
+        int size = q.size();
+        if(size>ma){
+            ma = size;
+            ans = level;
+        }
+        while(size--){
+            Node* t = q.front();
+            q.pop();
+            if(t->left)
+                q.push(t->left);
+            if(t->right)
+                q.push(t->right);
+        }
+        level++;
+    }
+    return ans;
+}
+
 // C++ implementation to find the level
 // having maximum number of Nodes
 #include <bits/stdc++.h>
